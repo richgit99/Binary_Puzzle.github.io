@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Puzzle</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="binary_puzzle.css">
+
+
+<body>
+
+    <header>
+
+        <h1>Welcome to RSM Creations</h1>
+
+        <h2> 6 x 6 &nbsp; Binary Puzzle</h2>
+
+<button class="open_button" id="open_button">Rules of the Game</button>
+
+
+ <dialog class="modal" id="modal">
+
+<h2>Rules of the Game</h2> <br><br>
+
+<p>1) Each row and column must conatain equal number of 1's and 0's</p>
+<p>2)Not more than two zeroes or ones and be placed together in both vertically and horizontally</p>
+
+<button class="close_button" id="close_button">Close Instructions</button>
+
+ </dialog>
+
+
+    </header>
+
+
+
+    <br><br>
+
+    <div class="conatainer_for_puzzle" id="conatainer_for_puzzle">
+
+        <div class="mini_container">
+
+            <div><button id="11"></button></div>
+            <div><button id="12" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="13" style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id="14"></button></div>
+            <div><button id="15"></button></div>
+            <div><button id="16"></button></div>
+
+        </div>
+
+
+        <div class="mini_container">
+
+
+            <div><button id="21" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="22"></button></div>
+            <div><button id="23" style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id="24" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="25"></button></div>
+            <div><button id="26"></button></div>
+
+        </div>
+
+
+        <div class="mini_container">
+
+            <div><button id="31" style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id="32" style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id="33"></button></div>
+            <div><button id="34" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="35"></button></div>
+            <div><button id="36"></button></div>
+
+        </div>
+
+
+
+        <div class="mini_container">
+
+
+            <div><button id="41"></button></div>
+            <div><button id="42" style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id="43"></button></div>
+            <div><button id="44"></button></div>
+            <div><button id="45" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="46"></button></div>
+
+        </div>
+
+
+
+        <div class="mini_container">
+
+
+            <div><button id="51"></button></div>
+            <div><button id="52"></button></div>
+            <div><button id="53"></button></div>
+            <div><button id="54" style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+            <div><button id="55"></button></div>
+            <div><button id="56"></button></div>
+
+        </div>
+
+
+        <div class="mini_container">
+
+
+            <div><button id='61' style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id='62'></button></div>
+            <div><button id='63'></button></div>
+            <div><button id='64' style="background-color: rgb(194, 189, 189);border: none;">1</button></div>
+            <div><button id='65'></button></div>
+            <div><button id='66' style="background-color: rgb(194, 189, 189);border: none;">0</button></div>
+
+        </div>
+
+
+
+    </div>
+
+    <br><br>
+
+    <div style="display: flex;flex-direction: row;justify-content: center;justify-items: center;gap: 0.3em;
+width: 90%;margin: 0 auto;" class="all_bts" id="all_bts">
+
+        <button class="start_game" title="Click to start the game" style="width: 32%;" id="start_game">Start
+            Game</button>
+
+        <button class="reset_value" title="Click to reset all values" style="width: 40%;" id="reset_value">Reset All
+            Values</button>
+
+        <button class="submit_button" title="Click on this button only when you have finished
+ solving the puzzle and is ready to see the result " id="submit_button">Submit Moves</button>
+
+    </div>
+    <!-- <br><br> -->
+    <div class="result_sen" id="result_sentence"></div>
+
+    <div id="result_analysis" class="result_analysis" style="margin: 0 auto;
+width: 80%;text-align: center;">
+
+
+
+        <div class="three_sen">
+            <span id="green_sample_box" style="margin-top: 0.7em;">
+
+            </span>
+            <p id="green_sample_sen">
+
+            </p>
+        </div>
+        <div class="three_sen">
+            <span id="red_sample_box" style="margin-top: 0.7em;">
+
+            </span>
+            <p id="red_sample_sen">
+
+            </p>
+        </div>
+        <div class="three_sen">
+            <span id="orange_sample_box" style="margin-top: 0.7em;font-size: large;padding-top: 0.2em;font-weight: bolder;">
+
+            </span>
+            <p id="orange_sample_sen">
+
+            </p>
+        </div>
+
+
+
+    </div>
+
+
+    <br><br><br>
+
+    <div class="footer">
+        <footer>
+
+            <div style="width: 30%;">
+
+                <li><a href=""> Privacy Policy</a> </li>
+                <li><a href="">Cookies</a></li>
+                <li><a href=""> Copyright</a> </li>
+                <li><a href=""> Rights</a> </li>
+                <li><a href=""> Company</a> </li>
+                <li><a href=""> Rules</a></li>
+
+
+            </div>
+
+
+            <div style="width: 36%;">
+
+                <li><a href=""> Facebook</a> </li>
+                <li><a href=""> Instgram</a> </li>
+                <li><a href=""> Tinder</a> </li>
+                <li><a href=""> Youtube</a> </li>
+                <li><a href=""> Tech News</a> </li>
+                <li><a href=""> Daily Newspapers</a></li>
+
+
+
+            </div>
+
+            <div style="width: 33%;">
+
+                <li><a href=""> Terms</a> </li>
+                <li><a href=""> FAQ</a> </li>
+                <li><a href=""> Email</a> </li>
+                <li><a href=""> API</a> </li>
+                <li><a href=""> Contact</a> </li>
+                <li><a href=""> Advertisements</a></li>
+
+
+
+            </div>
+
+
+            <br>
+
+
+
+        </footer>
+        <br>
+        <p style="text-align: center;width: 90%;color: chartreuse;padding-top:0.5em;padding-bottom: 0.5em;
+font-size: large;font-weight: bold;margin: 0 auto;background-color: rgb(37, 59, 14);border-radius: 5px;
+">You Last Visited: <span id="date"></span></p>
+<br><br>
+    </div>
+
+    <script src="binary_puzzle.js"></script>
+</body>
+
+</html>
