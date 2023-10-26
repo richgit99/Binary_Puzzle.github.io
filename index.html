@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Puzzle</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+       
+       <h1>
+           Binary Puzzle <small>By Richard Mascarenhas</small>
+        </h1>
+    </header>
+
+    <!-- <br> -->
+
+    <div class="biggest_container" id="biggest_container">
+
+
+        <div class="container">
+            <div id="row1">
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">0</button>
+                <button class="freezed_button">1</button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="to_be_filled to_be_zero"></button>
+            </div>
+
+            <div id="row2">
+                <button class="freezed_button">0</button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">0</button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="to_be_filled to_be_one"></button>
+            </div>
+
+            <div id="row3">
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">1</button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="freezed_button">0</button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="to_be_filled to_be_zero"></button>
+            </div>
+
+            <div id="row4">
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="freezed_button">1</button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="freezed_button">0</button>
+                <button class="to_be_filled to_be_one"></button>
+            </div>
+
+            <div id="row5">
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="freezed_button">0</button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="to_be_filled to_be_one"></button>
+            </div>
+
+            <div id="row6">
+                <button class="freezed_button">1</button>
+                <button class="to_be_filled to_be_one"></button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="freezed_button">1</button>
+                <button class="to_be_filled to_be_zero"></button>
+                <button class="freezed_button">0</button>
+            </div>
+
+            <button style="margin-top: 1.5em;background-color: darkgreen;
+            outline: none;min-width: 150px;padding: 0.6em 0.3em;" id="submit_button">Submit Game</button>
+            <br>
+            <div class="wining_result_line" id="result" style="display: none;">You Lost</div>
+
+           <button id="retry_button" onclick="refresh()">
+                Retry Again
+            </button>
+        </div>
+
+ 
+        <div class="container result_container" id="result_container">
+            <div id="row1">
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">0</button>
+                <button class="freezed_button">1</button>
+                <button>1</button>
+                <button>0</button>
+                <button>0</button>
+            </div>
+
+            <div id="row2">
+                <button class="freezed_button">0</button>
+                <button>0</button>
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">0</button>
+                <button>1</button>
+                <button>1</button>
+            </div>
+
+            <div id="row3">
+                <button class="freezed_button">1</button>
+                <button class="freezed_button">1</button>
+                <button>0</button>
+                <button class="freezed_button">0</button>
+                <button>1</button>
+                <button>0</button>
+            </div>
+
+            <div id="row4">
+                <button>0</button>
+                <button class="freezed_button">1</button>
+                <button>0</button>
+                <button>1</button>
+                <button class="freezed_button">0</button>
+                <button>1</button>
+            </div>
+
+            <div id="row5">
+                <button>0</button>
+                <button>0</button>
+                <button>1</button>
+                <button class="freezed_button">0</button>
+                <button>1</button>
+                <button>1</button>
+            </div>
+
+            <div id="row6">
+                <button class="freezed_button">1</button>
+                <button>1</button>
+                <button>0</button>
+                <button class="freezed_button">1</button>
+                <button>0</button>
+                <button class="freezed_button">0</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+ 
+    <footer id="footer">
+        <h1>Copyright © Richard Mascarenhas 2022, All rights reserved</h1>
+    </footer>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background-color: #CEDEBD;
+    
+}
+
+header,
+footer {
+    width: 100%;
+    border: 2px solid rgb(38, 63, 14);
+    background-color: rgb(34, 60, 9);
+    padding: 1em 0.5em;
+}
+
+header>h1, 
+footer>h1 {
+    word-spacing: 0.1em;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: chartreuse;
+    font-size: clamp(1.3rem, 2.3vw, 2.5rem);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+header small {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+}
+
+
+
+.biggest_container {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 1em;
+    /* flex-direction: column; */
+}
+
+#retry_button,
+#submit_button {
+    display: none;
+    background-color: rgb(158, 91, 10);
+    width: 50%;
+    outline: 1.5px solid orange;
+    margin: 0 auto;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 10px;
+    padding: 0.7em 0;
+    margin-top: 0.7em;
+}
+
+
+.biggest_container>div {
+    flex-basis: 300px;
+    flex-grow: 1;
+
+}
+
+
+.container {
+
+    /* border: 2px solid black; */
+    width: 80%;
+    margin: 0 auto;
+    /* min-height: 300px; */
+    margin-top: 1em;
+    /* max-height: 300px; */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 500px;
+}
+
+.container>div {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0 auto;
+}
+
+.container>div>button {
+    flex-grow: 1;
+    min-height: 2em;
+    aspect-ratio: 1/1;
+    max-height: 60px;
+    text-align: center;
+    font-size: large;
+    margin: 0 auto;
+    outline: 2px solid black;
+    /* border: 1px solid black; */
+}
+
+.freezed_button {
+    background-color: darkgray;
+    font-weight: bold;
+    color: black;
+}
+
+#submit_button {
+    font-size: large;
+    display: block;
+    margin: 0 auto;
+    padding: 0.3em 1em;
+}
+
+
+.after_submitting {
+    background-color: rgb(216, 212, 212, 0.5);
+    font-weight: bold;
+    color: black;
+}
+
+.wining_result_line {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: clamp(1.3rem, 2.1vw, 2.5rem);
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgb(235, 235, 157);
+    border: 2px solid gold;
+    border-radius: 20px;
+    padding: 0.5em 0.7em;
+    display: none;
+
+}
+
+.result_container {
+    max-width: 350px;
+    display: none;
+}
+
+.result_container button {
+    max-height: 20px;
+}
+
+
+.result_container::before {
+    content: 'Solution';
+    display: block;
+    width: 100%;
+    background-color: black;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.8em 0;
+    margin-bottom: 0.6em;
+    text-align: center;
+    border-radius: 10px;
+}
